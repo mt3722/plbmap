@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>臺灣念佛會據點互動地圖</title>
 
-  <!-- D3 (Cloudflare CDN) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"
-          integrity="sha512-u6sqRTuR0lLH9xpDNlbidcF3xhtwHOofPV5ChtcgG+y1lQagtAfqaeJ7X1YfDcoK2EK7gZ0O7sfsK5sdqUJ9/Q=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- D3 (jsDelivr CDN, no SRI) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script>
+    // 確認 D3 是否正確載入
+    console.log("D3 version:", (typeof d3 !== "undefined") ? d3.version : "undefined");
+  </script>
 
   <style>
     /* ---------- 1. 全域 ---------- */
@@ -132,7 +134,7 @@
     <div id="mapBox">
       <h1 id="mapTitle">
         臺灣念佛會據點互動地圖
-        <small id="version">v0.06</small>
+        <small id="version">v0.07</small>
       </h1>
       <div id="mapArea">
         <svg id="svgMap"></svg>
